@@ -1,6 +1,8 @@
 import * as core from '@actions/core'
 import * as github from '@actions/github'
-import artifact, {UploadArtifactOptions} from '@actions/artifact'
+import artifact, {
+  UploadArtifactOptions
+} from '@crimsongiteaactions/actions-artifact'
 
 export async function uploadArtifact(
   artifactName: string,

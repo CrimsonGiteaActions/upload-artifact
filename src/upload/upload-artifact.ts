@@ -2,7 +2,7 @@ import * as core from '@actions/core'
 import artifact, {
   UploadArtifactOptions,
   ArtifactNotFoundError
-} from '@actions/artifact'
+} from '@crimsongiteaactions/actions-artifact'
 import {findFilesToUpload} from '../shared/search'
 import {getInputs} from './input-helper'
 import {NoFileOptions} from './constants'
