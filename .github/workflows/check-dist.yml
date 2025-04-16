@@ -21,6 +21,10 @@ jobs:
   check-dist:
     runs-on: ubuntu-latest
 
+    permissions:
+      packages: read
+      contents: read
+
     steps:
       - uses: actions/checkout@v4
 
@@ -32,7 +36,7 @@ jobs:
 
       - name: Setup
         run: |
-          echo "//npm.pkg.github.com/:_authToken=${{ secrets.GHA_PACKAGES }}" >> ~/.npmrc
+          echo "//npm.pkg.github.com/:_authToken=${{ github.token }}" >> ~/.npmrc
 
       - name: Install dependencies
         run: npm ci
